@@ -1,5 +1,5 @@
 // src/pages/api/chat.ts
-import {convertToModelMessages, createGateway, streamText, type ToolSet, type UIMessage} from "ai";
+import {convertToModelMessages, createGateway, smoothStream, streamText, type ToolSet, type UIMessage} from "ai";
 import {z} from "zod";
 import {openai} from "@ai-sdk/openai";
 
@@ -56,6 +56,10 @@ export async function POST({request}: { request: Request }): Promise<Response> {
         model: gateway(model || 'gpt-4.1-mini'),
         messages: await convertToModelMessages(messages),
         tools,
+        experimental_transform: smoothStream({
+            delayInMs: 10, // optional: defaults to 10ms
+            chunking: 'word', // optional: defaults to 'word'
+        }),
     });
 
     return result.toUIMessageStreamResponse();
