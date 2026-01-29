@@ -1,11 +1,11 @@
 ---
 import '@fontsource/inter';
-import '@fontsource-variable/figtree';
+import '@fontsource-variable/lexend';
 import '../styles/global.css'
 
-import {Button} from "@/components/ui/button"
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
+import Chat from '@/components/chat/chat';
 ---
 
 <html lang="en">
@@ -18,15 +18,11 @@ import Footer from "@/components/Footer.astro";
     <title>Astro</title>
 </head>
 
-<body class="font-sans antialiased bg-gray-100 text-black min-h-screen">
+<body class="font-sans antialiased text-black min-h-dvh mx-4 md:mx-10 bg-gray-50">
 <Header/>
 
-<div class="p-10 mx-10 bg-white flex flex-col gap-6">
-    <h1 class="font-medium">
-        Hello, Astro!
-    </h1>
-
-    <Button>Button</Button>
+<div class="flex flex-col rounded-md">
+    <Chat client:visible/>
 </div>
 
 <Footer/>

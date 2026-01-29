@@ -5,6 +5,7 @@
 
 @theme {
     --font-sans: 'Inter', 'sans-serif';
+    --font-logo: 'Lexend Variable', 'sans-serif';
 }
 
 :root {
