@@ -1,6 +1,8 @@
 ---
 import '@fontsource/inter';
 import '../styles/global.css'
+
+import { Button } from "@/components/ui/button"
 ---
 
 <html lang="en">
@@ -12,7 +14,8 @@ import '../styles/global.css'
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-	<body>
+	<body class="font-sans bg-gray-50 text-black min-h-screen flex items-center justify-center">
 		<h1 class="font-medium">Astro</h1>
+		<Button>Button</Button>
 	</body>
 </html>
