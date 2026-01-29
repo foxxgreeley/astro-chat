@@ -1,5 +1,7 @@
 # Astro Chat
 
+![screenshot.png](screenshot.png)
+
 Astro Chat is a chat application powered by AI SDK V6, built with Astro and React.
 
 To start the development server, run:
@@ -16,3 +18,4 @@ pnpm run dev
 - AI Gateway for rapid AI integration
 - Built with Astro and React
 - TypeScript support
+- Tailwind CSS for styling
